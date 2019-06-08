@@ -70,7 +70,6 @@ function getRandomQuote() {
 function printQuote() {
   let randomQuote = getRandomQuote();
   const quoteSelector = document.querySelector("#quote-box");
-  const p = document.querySelector("p#source");
   quoteSelector.querySelector(".quote").innerHTML = randomQuote.quote;
   quoteSelector.querySelector(".source").innerHTML = randomQuote.source;
   quoteSelector.querySelector(".citation").innerHTML = randomQuote.citation;
@@ -79,7 +78,7 @@ function printQuote() {
   setInterval(printQuote, 20000);
 }
 
-//listen fot the click of the button
+//listen for the click of the button
 document
   .getElementById("loadQuote")
   .addEventListener("click", printQuote, false);
